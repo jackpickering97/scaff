@@ -1,7 +1,4 @@
-language: python
-python:
-  - "3.7"
-install:
-  - pip install -r requirements.txt
-script:
-  - pytest
+services:
+  - docker
+before_install:
+  - docker image build -t 7526436303/bitcoin .
